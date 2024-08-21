@@ -1,18 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rinterio Website</title>
-</head>
-<body>
+    <!-- google fonts CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind and daisyUi CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind script tag  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "dark-light-green": "text-green-400",
+              "light-green": "text-green-300",
+              "light-white": "rgba(255, 255, 255, 1.00)",
+              "icon-white": "rgba(233, 233, 233)",
+            },
+            fontFamily: {
+              manrope: "manrope",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-manrope bg-light-white">
     <!-- header section  -->
-     <header>
-        <h1>I make a Rinterio website using Tailwind and DaisyUi</h1>
-     </header>
-     <!-- main section  -->
-      <main></main>
-      <!-- footer section -->
-       <footer></footer>
-</body>
+    <header class="md:max-w-screen-xl mx-auto md:px-16 lg:px-20 bg-light-white">
+      <!-- navbar section  -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li class="font-bold text-gray-800"><a>Home</a></li>
+              <li class="font-medium text-gray-400"><a>Portfolio</a></li>
+              <li class="font-medium text-gray-400"><a>Service</a></li>
+              <li class="font-medium text-gray-400"><a>Blog</a></li>
+              <li class="font-medium text-gray-400"><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <i class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1
+           bg-lime-300 -rotate-45"></i>
+          <a class="text-xl font-extrabold">Rinterio</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="font-bold text-gray-800"><a>Home</a></li>
+              <li  class="font- text-gray-400"><a>Service</a></li>
+              <li  class="font- text-gray-400"><a>Portfolio</a></li>
+              <li  class="font- text-gray-400"><a>Blog</a></li>
+              <li  class="font- text-gray-400"><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+            <!-- icon content  -->
+             <div class="space-x-3">
+                <!-- search icon  -->
+                <button class="indicator bg-icon-white rounded-full
+                p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </button>
+                 <!-- shope icon  -->
+                 <div class="indicator bg-icon-white rounded-full
+                 p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                   
+             </div>
+        </div>
+        <!-- button content  -->
+        <div class="space-x-8 space-y-3">
+            <button class="btn ml-4 bg-lime-400 rounded-full 
+            font-extrabold text-base">Book Consult <i class="fa-solid fa-arrow-right-long rounded-full p-[5px] lg:mr-1
+            text-white bg-black -rotate-45"></i></button> 
+            
+        </div>
+      </div>
+    </header>
+    <!-- main section  -->
+    <main></main>
+    <!-- footer section -->
+    <footer></footer>
+  </body>
 </html>
